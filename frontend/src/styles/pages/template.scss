@@ -1,6 +1,7 @@
 @use "../variables/breakpoint" as *;
 
 .template {
+  height: 100vh;
   .title {
     font-size: 2rem;
     font-weight: bold;
