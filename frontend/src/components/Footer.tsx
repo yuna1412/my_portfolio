@@ -1,3 +1,5 @@
+import "../styles/layout/_footer.scss";
+
 export default function Footer() { 
     return (
         <footer className="footer">
