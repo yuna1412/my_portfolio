@@ -1,0 +1,18 @@
+/* =========================
+   Breakpoints
+   ※ PC「1280px」の想定
+========================= */
+
+/* タブレット：1023px ～ 768px */
+@mixin TB {
+  @media screen and (max-width: 1023px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+/* スマホ：767px 以下 */
+@mixin SP {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

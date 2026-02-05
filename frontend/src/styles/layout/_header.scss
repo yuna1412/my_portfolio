@@ -1,0 +1,18 @@
+@use "../variables/breakpoint" as *;
+
+.template {
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+// タブレットデザイン
+@include TB {
+}
+
+// スマホデザイン
+@include SP {
+}
