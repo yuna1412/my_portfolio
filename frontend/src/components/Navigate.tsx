@@ -4,17 +4,25 @@ export default function Navigate() {
   return (
     <nav className="navigate">
       <ol className="navigateList">
-        <li className="navigateList__item --active">
-          <NavLink to="/" className="navigateList__itemText">Top</NavLink>
+        <li className="navigateList__item">
+          <NavLink to="/" className={({ isActive }) =>
+              `navigateList__itemLink ${isActive ? "--active" : ""}`
+            }>Top</NavLink>
         </li>
         <li className="navigateList__item">
-          <NavLink to="/projects" className="navigateList__itemText">Projects</NavLink>
+          <NavLink to="/projects" className={({ isActive }) =>
+              `navigateList__itemLink ${isActive ? "--active" : ""}`
+            }>Projects</NavLink>
         </li>
         <li className="navigateList__item">
-          <NavLink to="/Log" className="navigateList__itemText">Log</NavLink>
+          <NavLink to="/log" className={({ isActive }) =>
+              `navigateList__itemLink ${isActive ? "--active" : ""}`
+            }>Log</NavLink>
         </li>
         <li className="navigateList__item">
-          <NavLink to="/Profile" className="navigateList__itemText">Profile</NavLink>
+          <NavLink to="/profile" className={({ isActive }) =>
+              `navigateList__itemLink ${isActive ? "--active" : ""}`
+            }>Profile</NavLink>
         </li>
       </ol>
     </nav>
