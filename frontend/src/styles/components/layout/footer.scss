@@ -1,6 +1,7 @@
-@use "../variables/_breakpoint" as *;
-@use "../variables/_color" as *;
-@use "../variables/_font" as *;
+@use "../../variables/_breakpoint" as *;
+@use "../../variables/_color" as *;
+@use "../../variables/font" as *;
+
 
 .footer {
     display: flex;
