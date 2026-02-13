@@ -1,28 +1,31 @@
+import { useNavigate } from "react-router-dom";
+
 import Card from "../../components/ui/Card";
+import { projects } from "../../data/projects";
+
 import "../../styles/pages/projects.scss";
 
-const cards = [
-  { title: "タイトル", date: new Date(), detail: "This is the first card.This is the first card.This is the first card.This is the first card." },
-  { title: "タイトル", date: new Date(), detail: "This is the second card.This is the second card.This is the second card.This is the second card." },
-  { title: "タイトル", date: new Date(), detail: "This is the third card.This is the third card.This is the third card.This is the third card.This is the third card." },
-  { title: "タイトル", date: new Date(), detail: "This is the fourth card.This is the fourth card.This is the fourth card.This is the fourth card.This is the fourth card." },
-  { title: "タイトル", date: new Date(), detail: "This is the fifth card." },
-];
 
 export default function Projects() { 
+    const navigate = useNavigate();
+
+
     return (
         <div className="projects">
             <section className="projectsSection">
                 <h2 className="projectsSection__title">Projects</h2>
                 <div className="projectsSectionWrapper">
-                    {cards.map((card, index) => (
-                        <Card
-                          key={index}
-                          title={card.title}
-                          date={card.date}
-                          detail={card.detail}
-                        />
-                      ))}
+                    {projects.map((project) => (
+                      <Card
+                        key={project.id}
+                        id={project.id}
+                        image={project.image}
+                        title={project.title}
+                        date={project.date}
+                        detail={project.detail}
+                        onClick={(id) => navigate(`/projects/${id}`)}
+                      />
+                    ))}
                 </div>
             </section>
         </div>
