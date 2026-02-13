@@ -7,6 +7,7 @@ import Top from "./pages/top/Page";
 import Projects from "./pages/projects/Page";
 import Log from "./pages/log/Page";
 import Profile from "./pages/profile/Page";
+import ProjectsDetail from "./pages/projects/detail/Page";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         {/* <Route path="/" element={<Template />} /> */}
         <Route path="/" element={<Top />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/detail" element={<ProjectsDetail />} />
         <Route path="/log" element={<Log />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>

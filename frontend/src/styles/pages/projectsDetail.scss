@@ -2,7 +2,7 @@
 @use "../variables/_color" as *;
 @use "../variables/_font" as *;
 
-.profile {
+.projectsDetail {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,12 +12,12 @@
   border: 1px solid #5E5E5E;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6);
 }
-.profileSection {
+.projectsDetailSection {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 0 10px 15px;
-  .profileSection__title {
+  .projectsDetailSection__title {
     margin: 0 10px 15px;
     padding: 10px 0 15px;
     border-bottom: 2px solid $sub-title-border;
@@ -25,40 +25,16 @@
     font-weight: 700;
     color: $sub-title;
   }
-}
-.profileSectionWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 80px 50px;
-  padding: 40px 50px;
-  .profileInfo {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    .profileInfo__image {
-      width: 250px;
+  .projectsDetailSectionWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 80px 50px;
+    padding: 40px 50px;
+    .projectsDetailSectionWrapper__image {
+      width: 100%;
       height: auto;
     }
-    .profileInfo__texts {
-      padding: 0 10px;
-      font-size: 14px;
-      color: $font;
-      .profileInfo__name {
-        margin-bottom: 10px;
-      }
-      .profileInfo__text {
-        // margin-bottom: 5px;
-      }
-    }
-  }
-  .profileDetails {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    .profileDetails__name {
-      margin-bottom: 15px;
-    }
-    p {
+    .projectsDetailSectionWrapper__text {
       font-size: 14px;
       color: $font;
     }
@@ -68,8 +44,8 @@
 // タブレットデザイン
 // ================================
 @include TB {
-  .profileSection {
-    .profileSectionWrapper {
+  .projectsDetailSection {
+    .projectsDetailSectionWrapper {
       grid-template-columns: 1fr;
     }
   }
@@ -79,7 +55,7 @@
 // スマホデザイン
 // ================================
 @include SP {
-  .profile {
+  .projectsDetail {
     padding: 30px 40px 0;
   }
 }
