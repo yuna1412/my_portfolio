@@ -3,9 +3,9 @@
    ※ PC「1280px」の想定
 ========================= */
 
-/* タブレット：1023px ～ 768px */
+/* タブレット：1023px 以下 */
 @mixin TB {
-  @media screen and (max-width: 1023px) and (min-width: 768px) {
+  @media screen and (max-width: 1023px) {
     @content;
   }
 }
