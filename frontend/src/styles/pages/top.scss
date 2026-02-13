@@ -38,18 +38,6 @@
 // ================================
 @include TB {
   .contentSection {
-    // display: flex;
-    // flex-direction: column;
-    // width: 100%;
-    // margin: 0 10px 15px;
-    // .contentSection__title {
-    //   margin: 0 10px 15px;
-    //   padding: 10px 0 15px;
-    //   border-bottom: 2px solid $sub-title-border;
-    //   font-size: 32px;
-    //   font-weight: 700;
-    //   color: $sub-title;
-    // }
     .contentSectionWrapper {
       grid-template-columns: 1fr;
     }
@@ -61,13 +49,6 @@
 // ================================
 @include SP {
   .top {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // gap: 30px;
-    // margin: 0 30px;
     padding: 30px 40px 0;
-    // border: 1px solid #5E5E5E;
-    // box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.6);
   }
 }
